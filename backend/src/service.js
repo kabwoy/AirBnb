@@ -202,6 +202,7 @@ export const getListingDetails = (listingId) =>
   resourceLock((resolve, reject) => {
     resolve({
       ...listings[listingId],
+      id:listingId
     });
   });
 

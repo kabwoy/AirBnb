@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { getSingleListing } from '../../features/listings/listingsSlice'
 import { useNavigate, useParams } from 'react-router-dom'
 import axios from 'axios';
+import { toast } from 'react-toastify';
 const LISTINGBASEURL ='http://localhost:5005/listings';
 
 function ListingDetail() {
@@ -11,6 +12,27 @@ function ListingDetail() {
     const tokenFromLocalStorage = localStorage.getItem('user');
     const navigate = useNavigate()
     const {email} = JSON.parse(tokenFromLocalStorage)
+    const deleteListing = async (id) =>{
+
+      const { token } = JSON.parse(tokenFromLocalStorage);
+      const config ={
+          headers:{
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${token}`
+          }
+      }
+      try{       
+          const response = await axios.delete(`http://localhost:5005/listings/${id}`, config);
+          navigate("/")
+          toast.error("Listing deleted Successfully")
+          console.log(response.data)
+          return;
+       }catch(error){
+          console.log("Error in getting the listing by id ", error);
+      }
+
+
+    }
     const getListingById=async (id)=> {
         const { token } = JSON.parse(tokenFromLocalStorage);
         const config ={
@@ -103,8 +125,8 @@ function ListingDetail() {
           <span className="title-font font-medium text-2xl text-gray-900">${singleListing.listing?.price}</span>
           {singleListing.listing?.owner == email && 
           <div className='flex'>
-            <button className="flex ml-auto mx-4 text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded">Delete</button>
-            <button className="flex ml-auto text-white bg-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-blue-600 rounded">Update</button>
+            <button className="flex ml-auto mx-4 text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded" onClick={() => deleteListing(singleListing.listing?.id)} >Delete</button>
+            <button className="flex ml-auto text-white bg-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-blue-600 rounded" onClick={() => navigate(`/listings/${singleListing.listing?.id}/edit`)}>Update</button>
             </div>}
          
         </div>
