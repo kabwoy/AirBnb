@@ -1,5 +1,6 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 import bookingsAPIService from './BookingsAPIService'
+import listingsSlice from '../listings/listingsSlice'
 
 
 const initialState = {
@@ -97,5 +98,5 @@ export const bookingsSlice = createSlice({
     }
 })
 
-export const { reset } = ListingsSlice.actions
-export default ListingsSlice.reducer
+export const {reset} = listingsSlice.actions
+export default listingsSlice.reducer

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
-import { useDispatch } from 'react-redux/es/hooks/useSelector'
+import { useDispatch } from 'react-redux'
 import { deleteBooking } from '../../features/bookings/BookingsSlice'
 
 const Bookings = ({ bookings }) => {
@@ -18,7 +18,7 @@ const Bookings = ({ bookings }) => {
                                 <div key={booking.id}>
                                     <Link to={`/bookings/${booking.id}`}>
                                         <div className="p-6">
-                                            <img className="object-cover object-center w-full mb-8 lg:h-48 md:h-36 rounded-xl" src={listing.thumbnail} alt="blog" />
+                                            <img className="object-cover object-center w-full mb-8 lg:h-48 md:h-36 rounded-xl" src={booking.thumbnail} alt="blog" />
                                             <div className="inline-flex justify-between w-full">
                                                 <h1 className="mb-8 text-xl font-semibold leading-none tracking-tighter text-neutral-600">{booking.totalPrice}.</h1>
                                                 <span>${booking.dateRange}</span>

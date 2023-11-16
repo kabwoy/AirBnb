@@ -35,14 +35,14 @@ const submitHandler = async (e)=>{
   e.preventDefault()
   const stDate = moment(startDate)
   const edDate = moment(endDate)
-  const days = edDate.diff(stDate , 'days')
+  const days = stDate.diff(edDate , 'days')
   console.log(days);
   const bookingObject = {
     dateRange:{
       start_date:startDate,
       end_date:endDate
     },
-    totalPrice:listing.listing.price * days
+    totalPrice:listing.listing.price * -days
   }
 
   const { token } = JSON.parse(tokenFromLocalStorage);

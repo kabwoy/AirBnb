@@ -106,5 +106,16 @@
       "postedOn": "2023-11-16T19:16:14.551Z"
     }
   },
-  "bookings": {}
+  "bookings": {
+    "805852741": {
+      "owner": "jj@gmail.com",
+      "dateRange": {
+        "start_date": "2023-11-16",
+        "end_date": "2023-11-17"
+      },
+      "totalPrice": 5000,
+      "listingId": "626924359",
+      "status": "accepted"
+    }
+  }
 }

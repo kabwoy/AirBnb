@@ -10,7 +10,7 @@ import Header from './components/Header';
 import ListingDetail from './components/listings/ListingDetail';
 import UpdateListing from './components/listings/UpdateListing';
 import NewBooking from './components/bookings/NewBooking';
-import UserBookings from './components/bookings/User/UserBooking';
+import BookingScreen from './components/bookings/BookingScreen';
 
 
 function App () {
@@ -23,7 +23,7 @@ function App () {
         <Route path="/register" element={<RegisterScreen />} />
         <Route path="/login" element={<LoginScreen />} />
         <Route path="/listings/new" element={<CreateListing />} />
-        <Route path="/bookings/userbookings" element={<UserBookings />} />
+        <Route path="/bookings" element={<BookingScreen />} />
         <Route path="/bookings/:id/new" element={<NewBooking />} />
         <Route path="/listings/:id" element={<ListingDetail />} />
         <Route path="/listings/:id/edit" element={<UpdateListing />} />

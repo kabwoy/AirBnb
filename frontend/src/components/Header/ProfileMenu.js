@@ -62,8 +62,8 @@ export default function BasicMenu() {
           <LogoutIcon/>
           Logout
         </MenuItem> 
-        <MenuItem    className="menu-items">
-          Your Bookings
+        <MenuItem onClick={()=>navigate("/bookings")}   className="menu-items">
+          Bookings
         </MenuItem>
         </div> : <div>
         <MenuItem className="menu-items" onClick={() => navigate("/register")}>
