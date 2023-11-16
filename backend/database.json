@@ -1,0 +1,83 @@
+{
+  "users": {
+    "oluochdancun19@gmail.com": {
+      "name": "Dancun Oluoch",
+      "password": "case",
+      "sessionActive": true
+    },
+    "johndoe@gmail.com": {
+      "name": "John Doe",
+      "password": "fklfdkldfkl",
+      "sessionActive": true
+    },
+    "mksdkffddfjk@gmail.com": {
+      "name": ",mmmm,",
+      "password": "jGdp36R)~,wG-bq",
+      "sessionActive": true
+    },
+    "janedoe@gmail.com": {
+      "name": "Case",
+      "password": "password",
+      "sessionActive": true
+    },
+    "user@gmail.com": {
+      "name": "user",
+      "password": "huhuyuygg",
+      "sessionActive": true
+    },
+    "admin@gmail.com": {
+      "name": "admin",
+      "password": "admin101",
+      "sessionActive": true
+    },
+    "jj@gmail.com": {
+      "name": "james",
+      "password": "123456",
+      "sessionActive": true
+    },
+    "master@gmail.com": {
+      "name": "Master",
+      "password": "123456",
+      "sessionActive": true
+    }
+  },
+  "listings": {
+    "468383927": {
+      "title": "Maldivs",
+      "owner": "jj@gmail.com",
+      "address": "Dubai",
+      "price": "2000",
+      "thumbnail": " https://images.unsplash.com/photo-1559767949-0faa5c7e9992?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGFpcmJuYnxlbnwwfHwwfHx8MA%3D%3D",
+      "metadata": " ",
+      "reviews": [],
+      "availability": [],
+      "published": false,
+      "postedOn": null
+    },
+    "655502269": {
+      "title": "Kempiski",
+      "owner": "jj@gmail.com",
+      "address": "Kiambu",
+      "price": "20000",
+      "thumbnail": " https://images.unsplash.com/photo-1553444836-bc6c8d340ba7?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "metadata": " ",
+      "reviews": [],
+      "availability": [],
+      "published": false,
+      "postedOn": null
+    },
+    "906598124": {
+      "title": "Mombasa Villa",
+      "owner": "jj@gmail.com",
+      "address": "Mombasa",
+      "price": "5000",
+      "thumbnail": " https://images.unsplash.com/photo-1591825729269-caeb344f6df2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YWlyYm5ifGVufDB8fDB8fHww",
+      "metadata": " ",
+      "reviews": [],
+      "availability": [],
+      "published": false,
+      "postedOn": null
+    }
+  },
+  "bookings": {}
+}
