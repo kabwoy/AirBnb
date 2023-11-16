@@ -9,7 +9,7 @@ import CreateListing from './components/listings/CreateListing';
 import Header from './components/Header';
 import ListingDetail from './components/listings/ListingDetail';
 import UpdateListing from './components/listings/UpdateListing';
-
+import NewBooking from './components/bookings/NewBooking';
 
 function App () {
   return (
@@ -21,6 +21,7 @@ function App () {
         <Route path="/register" element={<RegisterScreen />} />
         <Route path="/login" element={<LoginScreen />} />
         <Route path="/listings/new" element={<CreateListing />} />
+        <Route path="/bookings/:id/new" element={<NewBooking />} />
         <Route path="/listings/:id" element={<ListingDetail />} />
         <Route path="/listings/:id/edit" element={<UpdateListing />} />
       </Routes>

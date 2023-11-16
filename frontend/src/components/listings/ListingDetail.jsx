@@ -103,12 +103,6 @@ function ListingDetail() {
         </div>
         <p className="leading-relaxed">Fam locavore kickstarter distillery. Mixtape chillwave tumeric sriracha taximy chia microdosing tilde DIY. XOXO fam indxgo juiceramps cornhole raw denim forage brooklyn. Everyday carry +1 seitan poutine tumeric. Gastropub blue bottle austin listicle pour-over, neutra jean shorts keytar banjo tattooed umami cardigan.</p>
         <div className="flex mt-6 items-center pb-5 border-b-2 border-gray-200 mb-5">
-          <div className="flex">
-            <span className="mr-3">Color</span>
-            <button className="border-2 border-gray-300 rounded-full w-6 h-6 focus:outline-none"></button>
-            <button className="border-2 border-gray-300 ml-1 bg-gray-700 rounded-full w-6 h-6 focus:outline-none"></button>
-            <button className="border-2 border-gray-300 ml-1 bg-red-500 rounded-full w-6 h-6 focus:outline-none"></button>
-          </div>
           <div className="flex ml-6 items-center">
            
             <div className="relative">
@@ -128,7 +122,7 @@ function ListingDetail() {
             <button className="flex ml-auto mx-4 text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded" onClick={() => deleteListing(singleListing.listing?.id)} >Delete</button>
             <button className="flex ml-auto text-white bg-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-blue-600 rounded" onClick={() => navigate(`/listings/${singleListing.listing?.id}/edit`)}>Update</button>
             </div>}
-         
+            <button className="flex ml-auto mx-4 text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded" onClick={() =>  navigate(`/bookings/${singleListing.listing?.id}/new`)} >Book</button>
         </div>
       </div>
     </div>

@@ -6,6 +6,7 @@ import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import AccountCircleRoundedIcon from "@mui/icons-material/AccountCircleRounded";
 import useAuth from "../../hooks/useAuth";
 import LogoutIcon from '@mui/icons-material/Logout';
+import {useNavigate} from 'react-router-dom'
 import "./styles.css";
 
 
@@ -13,6 +14,12 @@ export default function BasicMenu() {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const auth = useAuth()
+  const navigate = useNavigate()
+  const logOut = () => {
+    localStorage.removeItem('user')
+    navigate("/")
+    
+  }
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
@@ -49,14 +56,14 @@ export default function BasicMenu() {
           },
         }}
       >
-        {auth ? <MenuItem onClick={handleClose} className="menu-items">
+        {auth ? <MenuItem  style={{color:'red'}} onClick={logOut} className="menu-items">
           <LogoutIcon/>
           Logout
         </MenuItem> : <div>
-        <MenuItem className="menu-items" onClick={handleClose}>
+        <MenuItem className="menu-items" onClick={() => navigate("/register")}>
           Signup
         </MenuItem>
-        <MenuItem onClick={handleClose} style={{color:'red'}} className="menu-items">
+        <MenuItem onClick={() => navigate("/login")} className="menu-items">
           Login
         </MenuItem>
         </div>  }

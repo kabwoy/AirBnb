@@ -11,7 +11,6 @@ const ListingScreen = () => {
   console.log(location.pathname);
     useEffect(() => {
         dispatch(getListings())
-        
     },[dispatch])
     console.log(listings);
     if(loading){
