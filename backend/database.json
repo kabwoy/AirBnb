@@ -55,9 +55,14 @@
       "thumbnail": " https://images.unsplash.com/photo-1521401830884-6c03c1c87ebb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGFpcmJuYnxlbnwwfHwwfHx8MA%3D%3D",
       "metadata": " ",
       "reviews": [],
-      "availability": [],
-      "published": false,
-      "postedOn": null
+      "availability": [
+        {
+          "start_date": "2023-11-17",
+          "end_date": "2023-12-29"
+        }
+      ],
+      "published": true,
+      "postedOn": "2023-11-16T21:19:50.223Z"
     },
     "468383927": {
       "title": "Maldivs",
@@ -107,6 +112,26 @@
     }
   },
   "bookings": {
+    "468606554": {
+      "owner": "jj@gmail.com",
+      "dateRange": {
+        "start_date": "2023-11-16",
+        "end_date": "2023-11-30"
+      },
+      "totalPrice": 70000,
+      "listingId": "626924359",
+      "status": "pending"
+    },
+    "758060163": {
+      "owner": "jj@gmail.com",
+      "dateRange": {
+        "start_date": "2023-11-17",
+        "end_date": "2023-11-21"
+      },
+      "totalPrice": 80000,
+      "listingId": "305145883",
+      "status": "pending"
+    },
     "805852741": {
       "owner": "jj@gmail.com",
       "dateRange": {

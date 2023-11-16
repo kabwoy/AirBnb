@@ -80,9 +80,7 @@ export default function BasicMenu() {
             width: "100%",
           }}
         />
-          <MenuItem onClick={()=>navigate('/listings/publish')} className="menu-items">
-          Publish
-        </MenuItem>
+        
         <MenuItem onClick={handleClose} className="menu-items">
           Airbnb Your Home
         </MenuItem>

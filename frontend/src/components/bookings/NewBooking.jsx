@@ -55,10 +55,12 @@ const submitHandler = async (e)=>{
     try{       
         const response = await axios.post(`http://localhost:5005/bookings/new/${listingId}`, bookingObject ,config);
         setListing(response.data)
-        console.log(response.data)
+        if(response.data.error) return toast.error(response.data.error)
+        toast.success("Listing booked Successfully")
+        navigate('/bookings')
         return;
      }catch(error){
-      toast.error(error.message)
+      toast.error(error.response.data.error)
         console.log("Error in getting the listing by id ", error);
     }
   console.log(bookingObject)

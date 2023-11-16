@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const LISTINGBASEURL ='http://localhost:5005/listings';
 
-const PUBLISH_URL = 'http://localhost:5005/listings/publish'
+// const PUBLISH_URL = 'http://localhost:5005/listings/publish'
 
 //get token from localStorage
 const tokenFromLocalStorage = localStorage.getItem('user');
