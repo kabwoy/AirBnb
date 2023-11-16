@@ -39,9 +39,26 @@
       "name": "Master",
       "password": "123456",
       "sessionActive": true
+    },
+    "j@gmail.com": {
+      "name": "ja",
+      "password": "123456",
+      "sessionActive": true
     }
   },
   "listings": {
+    "305145883": {
+      "title": "Yelp Camp",
+      "owner": "master@gmail.com",
+      "address": "USA",
+      "price": "20000",
+      "thumbnail": " https://images.unsplash.com/photo-1521401830884-6c03c1c87ebb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGFpcmJuYnxlbnwwfHwwfHx8MA%3D%3D",
+      "metadata": " ",
+      "reviews": [],
+      "availability": [],
+      "published": false,
+      "postedOn": null
+    },
     "468383927": {
       "title": "Maldivs",
       "owner": "jj@gmail.com",
@@ -53,6 +70,40 @@
       "availability": [],
       "published": false,
       "postedOn": null
+    },
+    "626924359": {
+      "title": "Kempiski",
+      "owner": "master@gmail.com",
+      "address": "Nairobi",
+      "price": "5000",
+      "thumbnail": " https://plus.unsplash.com/premium_photo-1683917068755-c2890e4824e1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YWlyYm5ifGVufDB8fDB8fHww",
+      "metadata": " ",
+      "reviews": [],
+      "availability": [
+        {
+          "start_date": "2023-11-16",
+          "end_date": "2023-11-30"
+        }
+      ],
+      "published": true,
+      "postedOn": "2023-11-16T19:13:29.441Z"
+    },
+    "628610882": {
+      "title": "Santorini",
+      "owner": "master@gmail.com",
+      "address": "Dubai",
+      "price": "1200",
+      "thumbnail": " https://images.unsplash.com/photo-1601918774946-25832a4be0d6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YWlyYm5ifGVufDB8fDB8fHww",
+      "metadata": " ",
+      "reviews": [],
+      "availability": [
+        {
+          "start_date": "2023-11-16",
+          "end_date": "2023-11-15"
+        }
+      ],
+      "published": true,
+      "postedOn": "2023-11-16T19:16:14.551Z"
     }
   },
   "bookings": {}

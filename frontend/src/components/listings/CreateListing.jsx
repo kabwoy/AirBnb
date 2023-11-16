@@ -27,7 +27,7 @@ const CreateListing = () => {
             toast.error("thumbnail is required!");
         } else {
             toast.success("listing added successfully!");
-            navigate("/listings");
+            navigate("/");
         }
         dispatch(createNewListing(formData));
         console.log(formData);

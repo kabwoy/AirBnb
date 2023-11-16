@@ -56,10 +56,16 @@ export default function BasicMenu() {
           },
         }}
       >
-        {auth ? <MenuItem  style={{color:'red'}} onClick={logOut} className="menu-items">
+        {auth ? 
+        <div>
+        <MenuItem  style={{color:'red'}} onClick={logOut} className="menu-items">
           <LogoutIcon/>
           Logout
-        </MenuItem> : <div>
+        </MenuItem> 
+        <MenuItem    className="menu-items">
+          Your Bookings
+        </MenuItem>
+        </div> : <div>
         <MenuItem className="menu-items" onClick={() => navigate("/register")}>
           Signup
         </MenuItem>
@@ -74,6 +80,9 @@ export default function BasicMenu() {
             width: "100%",
           }}
         />
+          <MenuItem onClick={()=>navigate('/listings/publish')} className="menu-items">
+          Publish
+        </MenuItem>
         <MenuItem onClick={handleClose} className="menu-items">
           Airbnb Your Home
         </MenuItem>
