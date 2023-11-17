@@ -1,5 +1,4 @@
 import * as React from "react";
-import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
@@ -62,6 +61,9 @@ export default function BasicMenu() {
           <LogoutIcon/>
           Logout
         </MenuItem> 
+        <MenuItem onClick={()=>navigate("/listings/new")}   className="menu-items">
+          Add Listing
+        </MenuItem>
         <MenuItem onClick={()=>navigate("/bookings")}   className="menu-items">
           Bookings
         </MenuItem>

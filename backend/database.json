@@ -77,7 +77,7 @@
       "postedOn": null
     },
     "626924359": {
-      "title": "Kempiski",
+      "title": "Kempiskii",
       "owner": "master@gmail.com",
       "address": "Nairobi",
       "price": "5000",
@@ -103,15 +103,25 @@
       "reviews": [],
       "availability": [
         {
-          "start_date": "2023-11-16",
-          "end_date": "2023-11-15"
+          "start_date": "2023-11-17",
+          "end_date": "2023-12-28"
         }
       ],
       "published": true,
-      "postedOn": "2023-11-16T19:16:14.551Z"
+      "postedOn": "2023-11-17T02:02:52.267Z"
     }
   },
   "bookings": {
+    "367157426": {
+      "owner": "jj@gmail.com",
+      "dateRange": {
+        "start_date": "2023-11-17",
+        "end_date": "2023-11-20"
+      },
+      "totalPrice": 60000,
+      "listingId": "305145883",
+      "status": "pending"
+    },
     "468606554": {
       "owner": "jj@gmail.com",
       "dateRange": {
@@ -120,7 +130,7 @@
       },
       "totalPrice": 70000,
       "listingId": "626924359",
-      "status": "pending"
+      "status": "accepted"
     },
     "758060163": {
       "owner": "jj@gmail.com",
@@ -130,7 +140,7 @@
       },
       "totalPrice": 80000,
       "listingId": "305145883",
-      "status": "pending"
+      "status": "declined"
     },
     "805852741": {
       "owner": "jj@gmail.com",

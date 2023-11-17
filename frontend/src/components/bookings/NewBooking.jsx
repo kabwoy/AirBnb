@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 import moment from 'moment'
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
-import Datepicker from "react-tailwindcss-datepicker";
 import { toast } from "react-toastify";
 const tokenFromLocalStorage = localStorage.getItem('user');
 const NewBooking = () => {
@@ -69,7 +68,7 @@ const submitHandler = async (e)=>{
 
 useEffect(()=>{
   getListingById(listingId)
-}, [])
+}, [listingId])
 
   return (
     <form onSubmit={submitHandler}>

@@ -1,7 +1,6 @@
 import axios from 'axios';
 import React, {useEffect } from 'react'
 import { useState } from 'react';
-import { Link } from 'react-router-dom'
 import useAuth from '../../hooks/useAuth';
 import { toast } from 'react-toastify';
 
@@ -39,7 +38,7 @@ const BookingScreen = () => {
     };
 
     try {
-      const response = await axios.put(
+       await axios.put(
         `http://localhost:5005/bookings/accept/${id}`,
         {},
         config
@@ -61,7 +60,7 @@ const BookingScreen = () => {
     };
 
     try {
-      const response = await axios.put(
+       await axios.put(
         `http://localhost:5005/bookings/decline/${id}`,
         {},
         config
@@ -74,9 +73,9 @@ const BookingScreen = () => {
     }
   }
   useEffect(()=>{
-    const res = getBookings()
+    getBookings()
     console.log(bookings);
-  } , [])
+  } , [bookings])
   return (
     <div>
         <h3 className='text-center font-bold text-3xl mb-4'>My Bookings</h3>
@@ -118,9 +117,9 @@ const BookingScreen = () => {
              </td>
 
              <td class="px-6 flex  ml-4 py-4">
-                    {booking.status == 'accepted' && <p className='text-green-400 font-bold mr-3'>Accepted</p>}
-                    {booking.status == 'pending' && <button onClick={()=>acceptBooking(booking.id)} disabled={auth.email !== booking.owner ? '' : 'true'} class="font-medium text-blue-600 dark:text-blue-500 hover:underline mr-4">Accept Booking</button>}
-                    {booking.status == 'pending' && <button  disabled={auth.email !== booking.owner ? '' : 'true'} onClick={() => rejectBooking(booking.id)} class="font-medium  dark:text-blue-500 hover:underline text-red-500">Reject Booking</button>}
+                    {booking.status === 'accepted' && <p className='text-green-400 font-bold mr-3'>Accepted</p>}
+                    {booking.status === 'pending' && <button onClick={()=>acceptBooking(booking.id)} disabled={auth.email !== booking.owner ? '' : 'true'} class="font-medium text-blue-600 dark:text-blue-500 hover:underline mr-4">Accept Booking</button>}
+                    {booking.status === 'pending' && <button  disabled={auth.email !== booking.owner ? '' : 'true'} onClick={() => rejectBooking(booking.id)} class="font-medium  dark:text-blue-500 hover:underline text-red-500">Reject Booking</button>}
                 </td>
          </tr>
           ))}

@@ -24,7 +24,7 @@ const UpdateListing = () => {
     };
     const updateObject = {title , price , address , thumbnail}
     try {
-     const response =  await axios.put(`http://localhost:5005/listings/${id}` , updateObject , config)
+     await axios.put(`http://localhost:5005/listings/${id}` , updateObject , config)
      navigate("/")
      toast.success("listing updated successfully!");
      return

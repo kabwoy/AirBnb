@@ -15,10 +15,7 @@ function ListingDetail() {
 
 
   const toogleModal = () => setIsVisible((isVisible) => !isVisible);
-  const [data, setData] = useState({
-    available: "",
-    notAvailable: " ",
-  });
+
   const { email } = JSON.parse(tokenFromLocalStorage);
   const deleteListing = async (id) => {
     const { token } = JSON.parse(tokenFromLocalStorage);
@@ -80,7 +77,7 @@ function ListingDetail() {
       ],
     };
     try{
-      const response = await axios.put(`http://localhost:5005/listings/publish/${id}`, publishingBody , config);
+      await axios.put(`http://localhost:5005/listings/publish/${id}`, publishingBody , config);
       toast.success("Published Successfully")
       window.location.reload()
     }catch(error){
@@ -100,7 +97,7 @@ function ListingDetail() {
 
     console.log(config)
     try{
-      const response = await axios.put(`http://localhost:5005/listings/unpublish/${id}`, {}, config);
+       await axios.put(`http://localhost:5005/listings/unpublish/${id}`, {}, config);
       toast.success("unpublished Successfully")
       window.location.reload()
     }catch(error){
@@ -111,7 +108,7 @@ function ListingDetail() {
 
   useEffect(() => {
     getListingById(id);
-  }, [id]);
+  }, []);
 
   return (
     <div>

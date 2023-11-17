@@ -4,11 +4,11 @@ import { Link, useNavigate, useLocation } from "react-router-dom";
 import { toast } from "react-toastify";
 import { login, reset } from '../../features/auth/authSlice'
 import logo from '../../Airbnb.png'
-//import { loginSuccess, loginFailure } from '../../features/auth/authSlice';
+
 
 const LoginScreen = () => {
   const dispatch = useDispatch();
-  const { user, success, error, loading, message } = useSelector(
+  const { user, success, error, message } = useSelector(
     (state) => state.auth
   );
 
